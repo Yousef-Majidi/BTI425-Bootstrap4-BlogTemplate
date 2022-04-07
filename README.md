@@ -1,4 +1,4 @@
-# Bti425A3Yousef
+# BTI425 - Bootstrap 4 Blog Template
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 

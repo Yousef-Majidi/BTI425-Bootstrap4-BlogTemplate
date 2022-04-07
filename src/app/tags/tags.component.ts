@@ -4,7 +4,7 @@ import { PostService } from '../post.service';
 @Component({
   selector: 'app-tags',
   templateUrl: './tags.component.html',
-  styleUrls: ['./tags.component.css']
+  styles: []
 })
 export class TagsComponent implements OnInit {
   tags: Array<string> = [];

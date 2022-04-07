@@ -4,7 +4,7 @@ import { BlogPost } from 'src/content/BlogPost';
 @Component({
   selector: 'app-post-card',
   templateUrl: './post-card.component.html',
-  styleUrls: ['./post-card.component.css']
+  styles: []
 })
 export class PostCardComponent implements OnInit {
   @Input('post') post!: BlogPost

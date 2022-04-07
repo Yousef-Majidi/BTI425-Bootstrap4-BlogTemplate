@@ -5,7 +5,7 @@ import { PostService } from '../post.service';
 @Component({
   selector: 'app-latest-posts',
   templateUrl: './latest-posts.component.html',
-  styleUrls: ['./latest-posts.component.css']
+  styles: []
 })
 export class LatestPostsComponent implements OnInit {
   posts: Array<BlogPost> = [];
