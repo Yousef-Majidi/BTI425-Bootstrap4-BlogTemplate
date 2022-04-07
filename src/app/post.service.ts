@@ -44,6 +44,28 @@ export class PostService {
     return this.http.get<string[]>(this._url + "/api/tags");
   }
 
+  // return an array of all blog posts using the path /api/posts?page=1&perPage=Number.MAX_SAFE_INTEGER
+  getAllPosts(): Observable<BlogPost[]> {
+    return this.http.get<BlogPost[]>(this._url + `/api/posts?page=1&perPage=${Number.MAX_SAFE_INTEGER}`);
+  }
 
+  // invokes the post method of the HttpClient to create a new blog post using the path /api/posts
+  // with the data parameter as the body of the request
+  newPost(post: BlogPost): Observable<BlogPost> {
+    return this.http.post<BlogPost>(this._url + "/api/posts", post);
+  }
+
+  // invokes the put method of the HttpClient to update a blog post using the path /api/posts/id
+  // with the data parameter as the body of the request
+  updatePost(post: BlogPost): Observable<BlogPost> {
+    return this.http.put<BlogPost>(this._url + `/api/posts/${post._id
+      }`, post);
+  }
+
+  // invokes the delete method of the HttpClient to delete a blog post using the path /api/posts/_id
+  // with the data parameter as the body of the request
+  deletePost(id: string): Observable<BlogPost> {
+    return this.http.delete<BlogPost>(this._url + `/api/posts/${id}`);
+  }
 
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -14,13 +14,14 @@ import { PostDataComponent } from './post-data/post-data.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PagingComponent } from './paging/paging.component';
 import { FooterPostsComponent } from './footer-posts/footer-posts.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
+    RoutingComponents,
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    routingComponents,
     PostCardComponent,
     SearchWidgetComponent,
     LatestPostsComponent,
@@ -28,12 +29,13 @@ import { FooterPostsComponent } from './footer-posts/footer-posts.component';
     TagsComponent,
     PostDataComponent,
     PagingComponent,
-    FooterPostsComponent
+    FooterPostsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
