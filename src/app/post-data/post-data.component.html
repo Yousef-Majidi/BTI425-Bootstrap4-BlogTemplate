@@ -13,14 +13,15 @@
                 <div class="title"><span>{{post.postedBy}}</span></div>
             </a>
             <div class="d-flex align-items-center flex-wrap">
-                <div class="date"><i class="icon-clock"></i>{{post.postDate}}</div>
+                <div class="date"><i class="icon-clock"></i>{{post.postDate | date:'mediumDate'}}</div>
                 <div class="views"><i class="icon-eye"></i>{{post.views}}</div>
                 <div class="comments meta-last"><i class="icon-comment"></i>{{post.comments?.length}}</div>
             </div>
         </div>
         <div class="post-body" innerHTML={{post.post}}>
         </div>
-        <div class="post-tags"><a *ngFor="let tag in post.tags" routerLink="/home" class="tag">{{tag}}</a></div>
+        <div class="post-tags" *ngFor="let tag of post.tags"><a [routerLink]="['/blog']"
+                [queryParams]="{ tag: tag.substring(1) }">{{tag}}</a></div>
         <div class="post-comments">
             <header>
                 <h3 class="h6">Post Comments<span class="no-of-comments">({{post.comments?.length}})</span></h3>

@@ -7,7 +7,6 @@ import { BlogPost } from 'src/content/BlogPost';
   styleUrls: ['./post-card.component.css']
 })
 export class PostCardComponent implements OnInit {
-
   @Input('post') post!: BlogPost
   constructor() { }
 

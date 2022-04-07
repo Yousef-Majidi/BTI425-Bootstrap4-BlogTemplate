@@ -2,6 +2,6 @@
     <header>
         <h3 class="h6">Categories</h3>
     </header>
-    <div class="item d-flex justify-content-between" *ngFor="let item of categories"><a
-            routerLink="/home">{{item.cat}}</a><span>{{item.num}}</span></div>
+    <div class="item d-flex justify-content-between" *ngFor="let cat of categories"><a [routerLink]="['/blog']"
+            [queryParams]="{ category: cat.cat }">{{cat.cat}}</a><span>{{cat.num}}</span></div>
 </div>
