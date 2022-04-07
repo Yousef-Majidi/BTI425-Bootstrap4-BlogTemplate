@@ -3,7 +3,8 @@
 </div>
 <div class="post-details">
     <div class="post-meta d-flex justify-content-between">
-        <div class="date meta-last">{{post?.postDate}}</div>
+        <div class="date meta-last">{{post?.postDate |
+            date:'mediumDate'}}</div>
         <div class="category"><a routerLink="/home">{{post?.category}}</a></div>
     </div><a [routerLink]="['/posts', post._id]">
         <h3 class="h4">{{post?.title}}</h3>
@@ -15,7 +16,7 @@
             </div>
             <div class="title"><span>{{post?.postedBy}}</span></div>
         </a>
-        <div class="date"><i class="icon-clock"></i>{{post?.postDate}}</div>
+        <div class="date"><i class="icon-clock"></i>{{post?.postDate | date:'mediumDate'}}</div>
         <div class="comments meta-last"><i class="icon-comment"></i>{{this.post?.comments?.length}}
         </div>
     </footer>

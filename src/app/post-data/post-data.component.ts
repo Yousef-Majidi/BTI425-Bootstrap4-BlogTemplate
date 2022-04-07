@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { PostService } from '../post.service';
 
@@ -10,6 +11,9 @@ import { PostService } from '../post.service';
 export class PostDataComponent implements OnInit {
   querySub: any;
   post !: any;
+  commentName!: string;
+  commentText!: string;
+
   constructor(private _postService: PostService, private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -23,6 +27,20 @@ export class PostDataComponent implements OnInit {
     if (this.querySub) {
       this.querySub.unsubscribe();
     }
+  }
+
+  submitComment(form: NgForm) {
+    this.post.comments.push({
+      author: this.commentName,
+      comment: this.commentText,
+      date: new Date().toLocaleDateString()
+    });
+
+    this._postService.updatePost(this.post).subscribe(() => {
+      this.commentName = '';
+      this.commentText = '';
+      form.reset();
+    });
   }
 
 }
