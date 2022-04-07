@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/bti425-a3-yousef'),
+      dir: require('path').join(__dirname, './coverage/bti425-a4-yousef'),
       subdir: '.',
       reporters: [
         { type: 'html' },

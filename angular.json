@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bti425-a3-yousef": {
+    "bti425-a4-yousef": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bti425-a3-yousef",
+            "outputPath": "dist/bti425-a4-yousef",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -91,10 +91,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bti425-a3-yousef:build:production"
+              "browserTarget": "bti425-a4-yousef:build:production"
             },
             "development": {
-              "browserTarget": "bti425-a3-yousef:build:development"
+              "browserTarget": "bti425-a4-yousef:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -102,7 +102,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bti425-a3-yousef:build"
+            "browserTarget": "bti425-a4-yousef:build"
           }
         },
         "test": {
@@ -124,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "bti425-a3-yousef"
+  "defaultProject": "bti425-a4-yousef"
 }
