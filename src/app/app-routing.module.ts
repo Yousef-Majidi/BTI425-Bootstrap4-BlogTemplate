@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
 import { HomeComponent } from './home/home.component';
+import { NewPostComponent } from './new-post/new-post.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PostComponent } from './post/post.component';
 import { PostsTableComponent } from './posts-table/posts-table.component';
 
-export const RoutingComponents = [HomeComponent, BlogComponent, PostComponent, PageNotFoundComponent, PostsTableComponent, EditPostComponent];
+export const RoutingComponents = [HomeComponent, BlogComponent, PostComponent, PageNotFoundComponent, PostsTableComponent, EditPostComponent, NewPostComponent];
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'posts/:id', component: PostComponent },
   { path: 'admin', component: PostsTableComponent },
   { path: 'admin/post/:id', component: EditPostComponent },
-  { path: '**', component: PageNotFoundComponent },
+  { path: 'admin/newPost', component: NewPostComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

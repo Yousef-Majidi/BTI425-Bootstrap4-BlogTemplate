@@ -37,4 +37,12 @@ export class EditPostComponent implements OnInit {
       }
     );
   }
+
+  onDelete(): void {
+    this._postService.deletePost(this.blogPost._id).subscribe(
+      () => {
+        this._router.navigate(['/admin']);
+      }
+    );
+  }
 }
