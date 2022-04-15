@@ -68,4 +68,48 @@ export class PostService {
     return this.http.delete<BlogPost>(this._url + `/api/posts/${id}`);
   }
 
+  private featuredPosts: BlogPost[] = [
+    {
+      _id: "5e9f9c9f9c9f9c9f9c9f9c9",
+      title: "Alberto Savoia Can Teach You About Interior",
+      postDate: "15/02/2022",
+      featuredImage: "/assets/img/featured-pic-1.jpeg",
+      post: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+      postedBy: "John Doe",
+      comments: [],
+      category: "Technology",
+      tags: [],
+      isPrivate: false,
+      views: 12
+    }, {
+      _id: "5e9f9c9f9c9f9c9f9c9f9c9",
+      title: "Lorem Ipsum Dolor Sit Amet Consectetur",
+      postDate: "14/03/2021",
+      featuredImage: "/assets/img/featured-pic-2.jpeg",
+      post: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+      postedBy: "John Doe",
+      comments: [],
+      category: "Business",
+      tags: [],
+      isPrivate: false,
+      views: 22
+    }, {
+      _id: "5e9f9c9f9c9f9c9f9c9f9c9",
+      title: "Alberto Savoia Can Teach You About Interior",
+      postDate: "18/02/2022",
+      featuredImage: "/assets/img/featured-pic-3.jpeg",
+      post: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+      postedBy: "John Doe",
+      comments: [],
+      category: "Technology",
+      tags: [],
+      isPrivate: false,
+      views: 38
+    }
+  ];
+
+  public getFeaturedPosts(): BlogPost[] {
+    return this.featuredPosts;
+  }
+
 }

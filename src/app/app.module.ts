@@ -21,6 +21,7 @@ import { DividerComponent } from './divider/divider.component';
 import { IntroComponent } from './intro/intro.component';
 import { HeroComponent } from './hero/hero.component';
 import { HomeLatestPostsComponent } from './home-latest-posts/home-latest-posts.component';
+import { FeaturedPostsComponent } from './featured-posts/featured-posts.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { HomeLatestPostsComponent } from './home-latest-posts/home-latest-posts.
     IntroComponent,
     HeroComponent,
     HomeLatestPostsComponent,
+    FeaturedPostsComponent,
   ],
   imports: [
     BrowserModule,
