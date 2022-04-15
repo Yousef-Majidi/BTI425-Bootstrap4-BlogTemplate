@@ -20,6 +20,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { DividerComponent } from './divider/divider.component';
 import { IntroComponent } from './intro/intro.component';
 import { HeroComponent } from './hero/hero.component';
+import { HomeLatestPostsComponent } from './home-latest-posts/home-latest-posts.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { HeroComponent } from './hero/hero.component';
     DividerComponent,
     IntroComponent,
     HeroComponent,
+    HomeLatestPostsComponent,
   ],
   imports: [
     BrowserModule,
