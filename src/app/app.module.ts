@@ -15,6 +15,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { PagingComponent } from './paging/paging.component';
 import { FooterPostsComponent } from './footer-posts/footer-posts.component';
 import { FormsModule } from '@angular/forms';
+import { NewsletterComponent } from './newsletter/newsletter.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { DividerComponent } from './divider/divider.component';
+import { IntroComponent } from './intro/intro.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +35,11 @@ import { FormsModule } from '@angular/forms';
     PostDataComponent,
     PagingComponent,
     FooterPostsComponent,
+    NewsletterComponent,
+    GalleryComponent,
+    DividerComponent,
+    IntroComponent,
+    HeroComponent,
   ],
   imports: [
     BrowserModule,
