@@ -1,0 +1,28 @@
+<section class="featured-posts no-padding-top">
+    <div class="container">
+        <div class="row d-flex align-items-stretch" *ngFor="let post of featuredPosts">
+            <div class="image col-lg-5"><img src={{post.featuredImage}} alt="..."></div>
+            <div class="text col-lg-7">
+                <div class="text-inner d-flex align-items-center">
+                    <div class="content">
+                        <header class="post-header">
+                            <div class="category"><a [routerLink]="['/blog']" [queryParams]="{ category: post.category }">{{post.category}}</a>
+                            </div><a [routerLink]="['/posts/' + post._id]">
+                                <h2 class="h4">{{post.title}}</h2>
+                            </a>
+                        </header>
+                        <p>{{post.post}}</p>
+                        <footer class="post-footer d-flex align-items-center"><a [routerLink]="['/home']" class="author d-flex align-items-center flex-wrap">
+                                <div class="avatar"><img src="/assets/img/avatar-1.jpg" alt="..." class="img-fluid">
+                                </div>
+                                <div class="title"><span>{{post.postedBy}}</span></div>
+                            </a>
+                            <div class="date"><i class="icon-clock"></i>{{post.postDate}}</div>
+                            <div class="comments"><i class="icon-comment"></i>{{post.comments.length}}</div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
