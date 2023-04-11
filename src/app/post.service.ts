@@ -9,7 +9,7 @@ const perPage = 6;
   providedIn: 'root'
 })
 export class PostService {
-  private _url = "blog-template-db-server-a0wup6xlt-yousef-majidi.vercel.app";
+  private _url = "blog-template-db-server.vercel.app";
   constructor(private http: HttpClient) { }
 
   // use HttpClient to return all of the posts available in the blogAPI for a specific page
